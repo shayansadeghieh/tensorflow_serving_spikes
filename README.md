@@ -15,3 +15,9 @@ When I run for 10000 requests I get:
 ```
 The mean pred time was 6.1302518830269275 ms
 Out of 10000 requests there were 38 spikes
+```
+The distribution plot looks like this:
+<img width="620" alt="image" src="https://user-images.githubusercontent.com/62001365/152210013-5ec04d7b-9390-4be1-a7d6-e3210985f9b9.png">
+
+But if you zoom past the 20ms point, you'll see the spikes
+<img width="612" alt="image" src="https://user-images.githubusercontent.com/62001365/152209867-1a567208-24af-453f-ad87-0a5dbfc4e61c.png">
