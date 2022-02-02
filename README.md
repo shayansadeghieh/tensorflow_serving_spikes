@@ -6,5 +6,7 @@ The docker image can be found here: https://hub.docker.com/r/ml6team/tf-serving-
 # To run
 1. Clone the repo `git clone https://github.com/shayansadeghieh/tensorflow_serving_spikes.git`
 2. Enter the root directory `cd tensorflow_serving_spikes`
-3. from the root directory in the repo run `bash serving.sh fake_model_id` to start up the docker container
-4. from the root directory run `python tfdf_serving.py`. It will output the number of latency spikes that occur and provide a distribution plot. 
+3. From the root directory in the repo in your terminal run `bash serving.sh fake_model_id` to start up the docker container
+4. From the root directory in your terminal run `python tfdf_serving.py`. It will output the number of latency spikes that occur and provide a distribution plot. 
+
+When I run for 10000 requests I get:
