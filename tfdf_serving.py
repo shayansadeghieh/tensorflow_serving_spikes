@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import json
 import requests
+import statistics
 import time
 import numpy as np
 
@@ -28,7 +29,7 @@ def make_request(data):
 
     # Define request to fake_model_id
     requests.post(
-        "http://localhost:8501/v1/models/fake_model_id:predict",
+        "http://localhost:8501/v1/models/fake_model_id_gbt:predict",
         headers={"Content-Type": "application/octet-stream"},
         data=json.dumps(data),
     )
@@ -53,9 +54,11 @@ for i in range(NUM_REQUESTS):
             count += 1
 
 print("The mean pred time was {} ms".format(np.mean(time_tracker)))
+print("The max pred time was {} ms".format(np.max(time_tracker)))
 print(f"Out of {NUM_REQUESTS} requests there were {count} spikes")
 
 
 # Plot the distribution
 sns.displot(time_tracker)
+plt.xlabel("prediction time (ms)")
 plt.show()
