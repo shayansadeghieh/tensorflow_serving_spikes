@@ -1,5 +1,5 @@
 # tensorflow_serving_spikes
-There seems to be some arbitrary spikes in latency when using tensorflow serving. To replicate the issue, I created a dummy tensorflow decision forest gradient boosted tree model that predicts penguin types. I used a docker image from the ml6 team that supports tensorflow decision forests ops in tensorflow serving. I then send requests to the fake_model_id and track prediction times/spikes in prediction times.
+There seems to be some arbitrary spikes in latency when using tensorflow serving. To replicate the issue, I created a dummy tensorflow decision forest gradient boosted tree model that predicts penguin types. I used a docker image from the ml6 team that supports tensorflow decision forests ops in tensorflow serving. I then send requests to the fake_model_id predict url and track prediction times/spikes in prediction times.
 
 The average prediction time is around 6 ms, and I defined a spike in prediction time as any prediction time greater than 20ms. I also read the results prior to moving onto the next request as to avoid qeueing.
 
