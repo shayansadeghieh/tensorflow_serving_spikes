@@ -10,3 +10,6 @@ The docker image can be found here: https://hub.docker.com/r/ml6team/tf-serving-
 4. From the root directory in your terminal run `python tfdf_serving.py`. It will output the number of latency spikes that occur and provide a distribution plot. 
 
 When I run for 10000 requests I get:
+```
+The mean pred time was 6.1302518830269275 ms
+Out of 10000 requests there were 38 spikes
