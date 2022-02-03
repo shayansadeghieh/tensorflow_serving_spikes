@@ -8,8 +8,8 @@ The docker image can be found here: https://hub.docker.com/r/ml6team/tf-serving-
 # To run (defaults to tensorflow decision forest gbt model)
 1. Clone the repo `git clone https://github.com/shayansadeghieh/tensorflow_serving_spikes.git`
 2. Enter the root directory `cd tensorflow_serving_spikes`
-3. From the root directory in your terminal run `bash serving.sh fake_model_id_gbt` to start up the docker container
-4. From the root directory in your terminal run `python tfdf_serving.py`. It will output the number of latency spikes that occur and provide a distribution plot. 
+3. From the tensorflow_serving_spikes root directory in your terminal run `bash serving.sh fake_model_id_gbt` to start up the docker container
+4. From the tensorflow_serving_spikes root directory in your terminal run `python tfdf_serving.py`. It will output the number of latency spikes that occur and provide a distribution plot. 
 
 *NOTE* if you want to use the rf model, in step 3 run `bash serving.sh fake_model_id_rf` and replace the predict url to be `fake_model_id_rf` in the tfdf_serving.py script. 
 
